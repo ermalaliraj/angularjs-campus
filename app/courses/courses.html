@@ -1,0 +1,49 @@
+<section id="courses-view" class="mainbar" data-ng-controller="Courses as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input class="input-md search-query"
+                           data-ng-model="vm.courseSearch"
+                           data-ng-keyup="vm.search($event)"
+                           placeholder="Search...">
+                </div>
+                <div class="col-sm-8">
+                    <div class="btn-group pull-right">
+                        <a class="btn btn-info btn-form-md"
+                           data-ng-click="vm.refresh()"><i class="fa fa-refresh"></i><span>Refresh</span></a>
+                        <a class="btn btn-info btn-form-md"
+                           data-ng-href="#/course/new"><i class="fa fa-plus"></i><span>Add Course</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="widget wviolet col-sm-12">
+                    <div class="widget-head">
+                        {{vm.title}}
+                        {{vm.filteredCourse.length}} / {{vm.courses.length}}
+                    </div>
+                    <div class="widget-content user">
+                        <div class="padd list-flow" data-ng-repeat="s in vm.filteredCourses track by s.id"
+                             data-ng-click="vm.gotoCourse(s)">
+                            <div class="user" title="Go to course details">
+                                <!--Learning Points-->
+                                <!--<input ng-model="s.imageSource"/>-->
+                                <!--giggles="what happens"-->
+                                <img data-cc-img-person="{{s.imageSource}}" class="img-thumbnail stacked"/>
+
+                                <div class="name-stack">
+                                    <h5>{{s.firstName}}</h5>
+                                    <h5>{{s.lastName}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="widget-foot">
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

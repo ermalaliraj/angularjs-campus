@@ -1,0 +1,120 @@
+<section id="dashboard-view" class="mainbar"
+         data-ng-controller="Dashboard as vm">
+    <section class="matter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="today-datas">
+
+                        <li class="bgreen"><a href="#/students">
+                            <div class="pull-left"><i class="fa fa-group"></i></div>
+                            <div class="datas-text pull-right"><span class="bold">{{vm.attendeeCount}}</span> Students
+                            </div>
+                            <div class="clearfix"></div></a>
+                        </li>
+
+                        <li class="borange"><a href="#/topics">
+                            <div class="pull-left"><i class="fa fa-pencil-square-o"></i></div>
+                            <div class="datas-text pull-right"><span class="bold">{{vm.topicCount}}</span> Topics
+                            </div>
+                            <div class="clearfix"></div></a>
+                        </li>
+
+                        <li class="bviolet"><a href="#/courses">
+                            <div class="pull-left"><i class="fa fa-calendar"></i></div>
+                            <div class="datas-text pull-right"><span class="bold">{{vm.courseCount}}</span> Courses
+                            </div>
+                            <div class="clearfix"></div></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="widget wgreen">
+                        <div class="widget-head">
+                            {{vm.students.title}}
+                        </div>
+                        <div class="widget-content">
+                            <div class="map">
+                                sdfdf
+                            </div>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="widget worange">
+                        <div class="widget-head">
+                            {{vm.topics.title}}
+                        </div>
+                        <div class="widget-content text-center text-info">
+                            <carousel class="carousel-inner" interval="vm.topics.interval">
+                                <slide data-ng-repeat="s in vm.topics.list track by s.id" active="s.active">
+                                    <img data-cc-img-person="{{s.imageSource}}" class="thumbnail"/>
+
+                                    <div class="carousel-caption">
+                                        <h4>{{s.firstName}} {{s.lastName}}</h4>
+                                    </div>
+                                </slide>
+                            </carousel>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="widget wviolet">
+                        <div class="widget-head">
+                            {{vm.courses.title}}
+                        </div>
+                        <div class="widget-content">
+                            <div class="widget-content referrer">
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th><a data-ng-click="vm.courses.setSort('track')" href="">Track</a></th>
+                                        <th><a data-ng-click="vm.courses.setSort('count')" href="">Topics</a></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr data-ng-repeat="t in vm.courses.tracks | orderBy:vm.courses.predicate:vm.courses.reverse track by t.id">
+                                        <td>{{t.track}}</td>
+                                        <td>{{t.count}}</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="widget wlightblue">
+                        <div class="widget-head">
+                            {{vm.news.title}}
+                        </div>
+                        <div class="widget-content text-center text-info">
+                            <small>{{vm.news.description}}</small>
+                        </div>
+                        <div class="widget-foot">
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

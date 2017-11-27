@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <title data-ng-bind="title">CC-BMEAN - Angular, Breeze, Mongo</title>
+    <style>
+        /* This helps the ng-show/ng-hide animations start at the right place. */
+        /* Since Angular has this but needs to load, this gives us the class early. */
+        .ng-hide {
+            display: none!important;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="/server/ccfavicon.ico" />
+
+    <!-- inject-vendor:css -->
+    <link href="/app/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/app/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="/app/bower_components/toastr/toastr.css" rel="stylesheet" />
+    <!-- endinject -->
+
+    <!-- inject:css -->
+    <link href="content/customtheme.css" rel="stylesheet">
+    <link href="content/styles.css" rel="stylesheet" />
+    <!-- endinject -->
+</head>
+<body>
+    <div>
+        <div data-ng-include="'layout/shell.html'"></div>
+    </div>
+
+    <span data-cc-scroll-to-top></span>
+
+    <!-- inject-vendor:js -->
+    <script src="/app/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/app/bower_components/angular/angular.js"></script>
+    <script src="/app/bower_components/angular-animate/angular-animate.js"></script>
+    <script src="/app/bower_components/angular-route/angular-route.js"></script>
+    <script src="/app/bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="/app/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/app/bower_components/toastr/toastr.js"></script>
+    <script src="/app/bower_components/moment/moment.js"></script>
+    <script src="/app/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js"></script>
+    <script src="/app/bower_components/extras.angular.plus/ngplus-overlay.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:js -->
+    <!-- Bootstrapping -->
+    <script src="app.module.js"></script>
+
+    <!--util-->
+    <script src="util/logger/logger.module.js"></script>
+    <script src="util/logger/logger.js"></script>
+    <script src="util/exception/exception.module.js"></script><!-- here but never in testRunner.html -->
+    <script src="util/exception/exception-handler.js"></script><!-- here but never in testRunner.html -->
+    <script src="util/exception/exception.js"></script><!-- here but never in testRunner.html -->
+    <script src="util/router/router.module.js"></script>
+    <script src="util/router/routehelper.js"></script>
+
+    <!--core-->
+    <script src="core/core.module.js"></script>
+    <script src="core/constants.js"></script>
+    <script src="core/common.js"></script>
+    <script src="core/config.js"></script>
+    <script src="core/bootstrap.dialog.js"></script>
+
+    <!-- App - Layout -->
+    <script src="layout/layout.module.js"></script>
+    <script src="layout/shell.js"></script>
+    <script src="layout/sidebar.js"></script>
+
+    <!-- App - Attendee -->
+    <script src="students/students.module.js"></script>
+    <script src="students/config.route.js"></script>
+    <script src="students/students.js"></script>
+
+    <!-- App - Dashboard -->
+    <script src="dashboard/dashboard.module.js"></script>
+    <script src="dashboard/config.route.js"></script>
+    <script src="dashboard/dashboard.js"></script>
+
+    <!-- App - Topic -->
+    <script src="topic/topic.module.js"></script>
+    <script src="topic/config.route.js"></script>
+    <script src="topic/topicdetail.js"></script>
+    <script src="topic/topics.js"></script>
+
+    <!-- App - Courses -->
+    <script src="courses/courses.module.js"></script>
+    <script src="courses/config.route.js"></script>
+    <script src="courses/coursedetail.js"></script>
+    <script src="courses/courses.js"></script>
+
+    <!-- App - WIP
+    <script src="wip/wip.module.js"></script>
+    <script src="wip/config.route.js"></script>
+    <script src="wip/wip.js"></script>
+-->
+
+    <!-- endinject -->
+</body>
+</html>
