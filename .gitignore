@@ -1,7 +1,7 @@
 # Ignore Node & Bower
 ###################
 node_modules
-**/bower_components
+# **/bower_components
 **/test/coverage
 report/
 

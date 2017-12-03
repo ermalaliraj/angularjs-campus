@@ -1,5 +1,5 @@
 <section id="topics-view" class="mainbar"
-         data-ng-controller="Topics as vm">
+         data-ng-controller="TopicsController as vm">
     <section class="matter">
         <div class="container">
             <div class="row">
@@ -29,18 +29,9 @@
                     <div class="padd" data-ng-repeat="s in vm.filteredTopics track by s.id"
                          data-ng-click="vm.gotoTopic(s)">
                         <div class="user" title="Go to topic details">
-                            <img data-cc-img-person="{{s.course.imageSource}}" class="img-thumbnail user-pic"/>
-
                             <div class="user-details">
-                                <small>{{s.timeSlot.name}}</small>
-                                at
-                                <small>{{s.room.name}}</small>
-                                <small class="right hidden-xs">{{s.level}}</small>
-                                <small class="right hidden-xs">{{s.track.name}}</small>
-                                <small class="right hidden-xs">{{s.code}}</small>
-                                <h3>{{s.title}}</h3>
-                                <h6>{{s.course.fullName}}</h6>
-                                <small class="text-subtle hidden-xs">{{s.tagsFormatted}}</small>
+                                <h3>{{s.name}}</h3>
+                                <small class="text-subtle hidden-xs">{{s.desc}}</small>
                             </div>
                         </div>
                     </div>

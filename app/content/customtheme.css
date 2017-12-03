@@ -876,7 +876,7 @@ form label {
 }
 
 .widget .padd {
-    padding: 15px;
+    padding: 5px;
 }
 
 .widget .widget-head {
@@ -901,9 +901,10 @@ form label {
 }
 
 .widget .widget-content {
-    border-left: 1px solid #ddd;
+  /* border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;*/
+    border: 1px solid #ddd;
 }
 
 .widget .widget-foot {
@@ -1254,11 +1255,11 @@ form label {
 .user {
     font-size: 12px !important;
     line-height: 20px !important;
+    display: flow-root;
 }
 
 .user img {
     max-width: 70px;
-    margin-top: 10px;
 }
 
 .user .user-pic {
@@ -1267,7 +1268,8 @@ form label {
 }
 
 .user .user-details {
-    margin-left: 85px;
+    margin-left: 30px;
+    display: inline-block;
 }
 
 .user .btn {

@@ -1,0 +1,5 @@
+[
+  {"id": "1", "firstName": "Ermal", "lastName": "Aliraj", "faculty": "Computer Science", "imageSource": "avatar1.jpg"},
+  {"id": "2", "firstName": "Paolo", "lastName": "Rossi", "faculty": "Computer Science", "imageSource": "cat.jpg"},
+  {"id": "3", "firstName": "Andrea", "lastName": "Cadorna", "faculty": "Engineering", "imageSource": "hat.jpg"}
+]

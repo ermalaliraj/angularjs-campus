@@ -31,7 +31,7 @@
     };
 
     var imageSettings = {
-        imageBasePath: '../content/images/photos/',
+        imageBasePath: 'content/images/photos/',
         unknownPersonImageSource: 'unknown_person.jpg'
     };
 

@@ -1,10 +1,10 @@
-<section id="attendees-view" class="mainbar" data-ng-controller="Students as vm">
+<section id="students-view" class="mainbar" data-ng-controller="StudentsController as vm">
     <section class="matter">
         <div class="container">
             <div class="row">
                 <div class="col-sm-4">
                     <input class="input-medium search-query"
-                           data-ng-model="vm.attendeeSearch"
+                           data-ng-model="vm.studentsSearch"
                            data-ng-keyup="vm.search($event)"
                            placeholder="Search...">
                 </div>
@@ -22,7 +22,7 @@
                          subtitle=""
                          right-text="">
                         {{vm.title}}
-                        {{vm.attendeeFilteredCount}} / {{vm.attendeeCount}}
+                        {{vm.studentsFilteredCount}} / {{vm.studentsCount}}
                         Page {{vm.paging.currentPage}} of {{vm.paging.pageCount}}
 
                     </div>
@@ -31,7 +31,7 @@
                         <div>
                             <pagination boundary-links="true"
                                         ng-change="vm.pageChanged()"
-                                        total-items="vm.attendeeFilteredCount"
+                                        total-items="vm.studentsFilteredCount"
                                         items-per-page="vm.paging.pageSize"
                                         ng-model="vm.paging.currentPage"
                                         max-size="vm.paging.maxPagesToShow"
@@ -43,14 +43,9 @@
                             <div class="clearfix"></div>
                         </div>
 
-                        <div class="padd list-flow fader-animation" data-ng-repeat="a in vm.attendees track by a.id">
-                            <div class="user">
-                                <img data-cc-img-person="{{a.imageSource}}" class="img-thumbnail stacked"/>
-
-                                <div class="name-stack">
-                                    <h5>{{a.firstName}}</h5>
-                                    <h5>{{a.lastName}}</h5>
-                                </div>
+                        <div class="widget-content user">
+                            <div class="padd" data-ng-repeat="s in vm.filteredStudents track by s.id" data-ng-click="vm.gotoTopic(s)">
+                                <img-person student="s"/>
                             </div>
                         </div>
                     </div>
