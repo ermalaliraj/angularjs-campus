@@ -11,7 +11,9 @@
     "prestart": "npm install",
     "start": "http-server -a localhost -p 8000"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ng-table": "^3.0.1"
+  },
   "devDependencies": {},
   "paths": {
     "html": "./app/**/*.html",

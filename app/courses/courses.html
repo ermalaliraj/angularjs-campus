@@ -23,13 +23,9 @@
                         {{vm.title}}
                         {{vm.filteredCourses.length}} / {{vm.courses.length}}
                     </div>
-                    <div class="widget-content user">
-                        <div class="padd list-flow" data-ng-repeat="s in vm.filteredCourses track by s.id"
-                             data-ng-click="vm.gotoCourse(s)">
+                    <div>
+                        <!--<div class="padd list-flow" data-ng-repeat="s in vm.filteredCourses track by s.id"  data-ng-click="vm.gotoCourse(s)">
                             <div class="user" title="Go to course details">
-                                <!--Learning Points-->
-                                <!--<input ng-model="s.imageSource"/>-->
-                                <!--giggles="what happens"-->
                                 <img data-cc-img-person="{{s.imageSource}}" class="img-thumbnail stacked"/>
 
                                 <div class="name-stack">
@@ -37,10 +33,15 @@
                                     <h5>{{s.lastName}}</h5>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="widget-foot">
-                        <div class="clearfix"></div>
+                        </div>-->
+                        <table ng-table="vm.tableParams" class="table table-striped table-bordered" show-filter="true">
+                            <tr ng-repeat="s in vm.filteredCourses ">
+                                <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
+                                    {{s.name}}</td>
+                                <td title="'Age'" filter="{ desc: 'text'}" sortable="'desc'">
+                                    {{s.desc}}</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>

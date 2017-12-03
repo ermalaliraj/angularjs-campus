@@ -10,7 +10,6 @@
     function TopicsController($location, $routeParams, common, config, Topics) {
         /*jshint validthis: true */
         var vm = this;
-
         var keyCodes = config.keyCodes;
 
         vm.filteredTopics = [];

@@ -1,5 +1,5 @@
 [
-  {"id": "1", "firstName": "Ermal", "lastName": "Aliraj", "imageSource": ""},
-  {"id": "2", "firstName": "Paolo", "lastName": "Rossi", "imageSource": ""},
-  {"id": "3", "firstName": "Andrea", "lastName": "Cadorna", "imageSource": ""}
+  {"id": "1", "name": "Java", "desc": "Java 7", "imageSource": ""},
+  {"id": "2", "name": "Javascript", "desc": "Fundamentals of Javascript", "imageSource": ""},
+  {"id": "3", "name": "EJB", "desc": "Enterprise Java Bean 3.1", "imageSource": ""}
 ]

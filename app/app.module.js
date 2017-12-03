@@ -21,5 +21,6 @@
         'app.layout',
         'app.topic',
         'app.courses'
+        ,'ngTable'
     ]);
 })();

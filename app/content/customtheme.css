@@ -859,7 +859,7 @@ form label {
 }
 
 .widget .table-bordered {
-    border: 0;
+    /*border: 0;*/
 }
 
 .widget .table-bordered th {
@@ -884,7 +884,7 @@ form label {
     border: 1px solid #ddd;
     color: #777;
     font-size: 18px;
-    padding: 12px 15px;
+    padding: 8px 15px;
 }
 
 .widget .widget-head .widget-icons i {

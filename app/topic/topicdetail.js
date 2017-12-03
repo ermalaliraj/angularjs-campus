@@ -15,7 +15,7 @@
         var vm = this;
         var logger = common.logger;
         var $q = common.$q;
-        
+
         vm.deleteTopic = deleteTopic;
         vm.goBack = goBack;
         vm.isSaving = false;
@@ -58,7 +58,7 @@
 
             function confirmDelete() {
                 Topics.delete(vm.topic.id, function () {
-                    logger.info("Topic " + vm.topic.name + " deleted with success (non really!)");
+                    logger.warning("Topic " + vm.topic.name + " deleted with success (non really!)");
                     gotoTopics();
                 });
             }
