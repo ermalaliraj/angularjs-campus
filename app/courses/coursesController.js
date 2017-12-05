@@ -5,9 +5,9 @@
         .module('app.courses')
         .controller('Courses', Courses);
 
-    Courses.$inject = ['$location', 'common', 'config', 'Courses', 'ngTableParams'];
+    Courses.$inject = ['$location', 'common', 'config', 'Courses'];
 
-    function Courses($location, common, config, Courses, ngTableParams) {
+    function Courses($location, common, config, Courses) {
         /*jshint validthis: true */
         var vm = this;
 
@@ -37,24 +37,11 @@
 
         function getCourses() {
 
-            vm.tableParams = new ngTableParams({
-                    page: 1,
-                    count: 2
-                },{
-                    total: vm.courses.length,
-                    getData: function ($defer, params) {
-
-                        Courses.list(function (courses) {
-                            console.debug("getCourses:"+courses);
-                            vm.courses = courses;
-                            vm.filteredCourses = courses;
-                            $defer.resolve(vm.courses.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-                            params.total(vm.courses.length);
-                        });
-                    }
-                }
-            );
-
+            Courses.list(function (courses) {
+                console.debug("getCourses:"+courses);
+                vm.courses = courses;
+                vm.filteredCourses = courses;
+            });
             return vm.courses;
         }
 

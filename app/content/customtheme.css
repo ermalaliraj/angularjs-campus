@@ -972,6 +972,13 @@ form label {
     color: #eee;
 }
 
+.widget-head .left-title {
+    float: left;
+}
+.widget .widget-head .right-title {
+    margin-left: 150px;
+}
+
 /* Widget white extras */
 
 .widget .nav-tabs > li a {

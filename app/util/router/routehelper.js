@@ -55,7 +55,7 @@
                 route.config.resolve =
                     angular.extend(route.config.resolve || {}, routehelperConfig.config.resolveAlways);
                 $routeProvider.when(route.url, route.config);
-                console.debug("[route] url:"+route.url+", template: "+route.config.templateUrl);
+                //console.debug("[route] url:"+route.url+", template: "+route.config.templateUrl);
             });
             $routeProvider.otherwise({redirectTo: '/'});
         }

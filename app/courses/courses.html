@@ -13,7 +13,7 @@
                         <a class="btn btn-info btn-form-md"
                            data-ng-click="vm.refresh()"><i class="fa fa-refresh"></i><span>Refresh</span></a>
                         <a class="btn btn-info btn-form-md"
-                           data-ng-href="#/course/new"><i class="fa fa-plus"></i><span>Add Course</span></a>
+                           href="#/course/new"><i class="fa fa-plus"></i><span>Add Course</span></a>
                     </div>
                 </div>
             </div>
@@ -36,10 +36,10 @@
                         </div>-->
                         <table ng-table="vm.tableParams" class="table table-striped table-bordered" show-filter="true">
                             <tr ng-repeat="s in vm.filteredCourses ">
-                                <td title="'Name'" filter="{ name: 'text'}" sortable="'name'">
-                                    {{s.name}}</td>
-                                <td title="'Age'" filter="{ desc: 'text'}" sortable="'desc'">
-                                    {{s.desc}}</td>
+                                <td title="'Name'" sortable="'id'">{{s.name}}</td>
+                                <td title="'Description'" sortable="'desc'">{{s.desc}}</td>
+                                <td title="'Available'">{{s.availableAttendance}}</td>
+                                <td title="'Atteendes'">{{s.attendees}}</td>
                             </tr>
                         </table>
                     </div>

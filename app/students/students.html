@@ -21,17 +21,15 @@
                     <div class="widget-head"
                          subtitle=""
                          right-text="">
-                        {{vm.title}}
-                        {{vm.studentsFilteredCount}} / {{vm.studentsCount}}
-                        Page {{vm.paging.currentPage}} of {{vm.paging.pageCount}}
-
+                        <div class="left-title">{{vm.title}} {{vm.students.length}} / {{vm.studentsCount}}</div>
+                        <div class="right-title">Page {{vm.paging.currentPage}} of {{vm.paging.pageCount}}</div>
                     </div>
 
                     <div class="widget-content user">
                         <div>
                             <pagination boundary-links="true"
                                         ng-change="vm.pageChanged()"
-                                        total-items="vm.studentsFilteredCount"
+                                        total-items="vm.studentsCount"
                                         items-per-page="vm.paging.pageSize"
                                         ng-model="vm.paging.currentPage"
                                         max-size="vm.paging.maxPagesToShow"
@@ -44,7 +42,7 @@
                         </div>
 
                         <div class="widget-content user">
-                            <div class="padd" data-ng-repeat="s in vm.filteredStudents track by s.id" data-ng-click="vm.gotoTopic(s)">
+                            <div class="padd" data-ng-repeat="s in vm.students track by s.id" data-ng-click="vm.gotoTopic(s)">
                                 <img-person student="s"/>
                             </div>
                         </div>

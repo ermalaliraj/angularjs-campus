@@ -13,15 +13,13 @@
 
         var keyCodes = config.keyCodes;
 
-        vm.studentsCount = 0;
-        vm.studentsFilteredCount = 0;
         vm.studentsSearch = '';
         vm.students = [];
-        vm.filteredStudents = [];
+        vm.studentsCount = 0;
         vm.paging = {
             currentPage: 1,
             maxPagesToShow: 5,
-            pageSize: 15
+            pageSize: 2
         };
         vm.pageChanged = pageChanged;
         vm.refresh = refresh;
@@ -29,13 +27,12 @@
         vm.title = 'Students';
 
         Object.defineProperty(vm.paging, 'pageCount', {
-            get: function () {
+            get: function() {
                 var val = 1;
-    
-                if (vm.studentsFilteredCount % vm.paging.pageSize == 0)
+                if (vm.studentsCount % vm.paging.pageSize == 0) {
                     val = 0;
-    
-                return Math.floor(vm.studentsFilteredCount / vm.paging.pageSize) + val;
+                }
+                return Math.floor(vm.studentsCount / vm.paging.pageSize) + val;
             }
         });
 
@@ -46,22 +43,18 @@
         }
 
         function getStudents() {
-            Students.list(function (students) {
+            Students.list((vm.paging.currentPage - 1), vm.paging.pageSize, function (students) {
                // console.debug(students);
                 vm.students = students;
-                vm.filteredStudents = students;
                 getStudentsCount();
-                getStudentsFilteredCount();
             });
             return vm.students;
         }
 
         function getStudentsCount() {
-            vm.studentsCount = vm.students.length;
-        }
-
-        function getStudentsFilteredCount() {
-            vm.studentsFilteredCount = vm.filteredStudents.length;
+            Students.count(function (count) {
+                vm.studentsCount = count;
+            });
         }
 
         function pageChanged() {
@@ -76,8 +69,8 @@
             if ($event.keyCode === keyCodes.esc) {
                 vm.studentsSearch = '';
             }
-            vm.filteredStudents = vm.students.filter(studentsFilter);
-            getStudentsFilteredCount();
+            vm.students = vm.students.filter(studentsFilter);
+            getStudentsCount();
         }
         function studentsFilter(student) {
             var isMatch = vm.studentsSearch ? common.textContains(student.firstName, vm.studentsSearch) : true;

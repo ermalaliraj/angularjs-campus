@@ -7,7 +7,6 @@
 
     /* @ngInject */
     function imgPerson(config) {
-        console.debug('imgPerson');
         //Usage: <img-person thumbnail="{{person.imageSource}}"/>
         var basePath = config.imageSettings.imageBasePath;
         var unknownImage = config.imageSettings.unknownPersonImageSource;

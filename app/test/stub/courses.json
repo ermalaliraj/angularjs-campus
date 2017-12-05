@@ -1,5 +1,5 @@
 [
-  {"id": "1", "name": "Java", "desc": "Java 7", "imageSource": ""},
-  {"id": "2", "name": "Javascript", "desc": "Fundamentals of Javascript", "imageSource": ""},
-  {"id": "3", "name": "EJB", "desc": "Enterprise Java Bean 3.1", "imageSource": ""}
+  {"id": "1", "name": "Java", "desc": "Java 7", "availableAttendance": "20", "attendees": "0"},
+  {"id": "2", "name": "Javascript", "desc": "Fundamentals of Javascript", "availableAttendance": "15", "attendees": "0"},
+  {"id": "3", "name": "EJB", "desc": "Enterprise Java Bean 3.1", "availableAttendance": "10", "attendees": "0"}
 ]
