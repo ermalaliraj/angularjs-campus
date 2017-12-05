@@ -879,6 +879,14 @@ form label {
     padding: 5px;
 }
 
+.widget .padd-left {
+    padding-left: 5px;
+}
+
+.widget .padd-right {
+    padding-right: 5px;
+}
+
 .widget .widget-head {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
@@ -1285,5 +1293,24 @@ form label {
 
 /* Users ends */
 
+.widget .tableSingle {
+    margin-top: 15px;
+}
+.widget .tableSingle th{
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.widget .tableSingle th:nth-child(1){width: 125px;}
+.widget .tableSingle th:nth-child(4){width: 125px;}
+.widget .tableSingle th:nth-child(5){width: 125px;}
+.widget .tableSingle th:nth-child(6){width: 125px;}
+
+
+.widget .outerDivCenterIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 /*#endregion */

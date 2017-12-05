@@ -27,66 +27,33 @@
                 </div>
                 <div class="widget-content user">
                     <div class="form-group">
-                        <label class="control-label">First Name</label>
+                        <label class="control-label">Name</label>
 
                         <div>
                             <input class="form-control"
                                    data-ng-model="vm.course.firstName"
                                    data-z-validate
-                                   placeholder="First Name"/>
+                                   placeholder="Name"/>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Last Name</label>
+                        <label class="control-label">Description</label>
 
                         <div>
-                            <input class="form-control"
-                                   data-ng-model="vm.course.lastName"
-                                   data-z-validate
-                                   placeholder="Last Name"/>
+                             <textarea class="form-control"
+                                       data-ng-model="vm.course.bio"
+                                       data-z-validate
+                                       placeholder="Description"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label">Email</label>
+                        <label class="control-label">Available places</label>
 
                         <div>
                             <input class="form-control"
                                    data-ng-model="vm.course.email"
                                    data-z-validate
-                                   placeholder="Email"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Blog</label>
-
-                        <div>
-                            <input class="form-control"
-                                   data-ng-model="vm.course.blog"
-                                   data-z-validate
-                                   placeholder="Blog"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Twitter</label>
-
-                        <div>
-                            <input class="form-control"
-                                   data-ng-model="vm.course.twitter"
-                                   data-z-validate
-                                   placeholder="Twitter"/>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <img data-cc-img-person="{{vm.course.imageSource}}" class="img-thumbnail"/>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Bio</label>
-
-                        <div>
-                            <textarea class="form-control"
-                                      data-ng-model="vm.course.bio"
-                                      data-z-validate
-                                      placeholder="Enter course bio"></textarea>
+                                   placeholder="Available places"/>
                         </div>
                     </div>
                 </div>

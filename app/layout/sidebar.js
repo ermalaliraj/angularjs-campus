@@ -32,7 +32,7 @@
         }
 
         function clearStorage() {
-            return bsDialog.deleteDialog('local storage and work in progress')
+            return bsDialog.deleteDialog('Delete local storage and work in progress')
                 .then(confirmDelete).catch(cancelDelete);
 
             function confirmDelete() {

@@ -15,9 +15,10 @@
                     url: 'test/stub/students.json',
                     cache: true
                 }).then(function successCallback(response) {
-                    console.log("page: "+pageStart+", pageSize: "+pageSize+", BUT for demo purpose we slice array from-to. StartElem: " + (pageStart) + ", EndElem: " + (pageStart+pageSize));
                     var arr = response.data;
-                    callback(arr.slice(pageStart, pageStart+pageSize));
+                    pageStart = pageStart * pageSize;
+                    console.log("page: " + pageStart + ", pageSize: " + pageSize + ", BUT for demo purpose we slice array from-to. StartElem: " + (pageStart) + ", EndElem: " + (pageStart + pageSize));
+                    callback(arr.slice(pageStart, pageStart + pageSize));
                 }, function errorCallback(response) {
                     logger.error("Error calling Students: " + response);
                 });
