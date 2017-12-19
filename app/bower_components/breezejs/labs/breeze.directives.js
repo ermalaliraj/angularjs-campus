@@ -75,8 +75,8 @@
     *  Usage for input elements (input|select|textarea):
     *  ---------------------------------------------------
     *   When scope is a viewmodel (vm):
-    *     <input data-ng-model='vm.topic.firstName' data-z-validate />
-    *     <input data-ng-model='vm.topic.track' data-z-validate='trackId' />
+    *     <input data-ng-model='vm.session.firstName' data-z-validate />
+    *     <input data-ng-model='vm.session.track' data-z-validate='trackId' />
     *
     *   When within a repeater where scope is an entity:
     *     <input data-ng-model='title' data-z-validate />

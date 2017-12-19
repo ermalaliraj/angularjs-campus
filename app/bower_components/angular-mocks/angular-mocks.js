@@ -2454,7 +2454,7 @@ if (window.jasmine || window.mocha) {
       var injector = currentSpec.$injector;
       if (!injector) {
         if (strictDi) {
-          // If strictDi is enabled, annotate the providerInjector util
+          // If strictDi is enabled, annotate the providerInjector blocks
           angular.forEach(modules, function(moduleFn) {
             if (typeof moduleFn === "function") {
               angular.injector.$$annotate(moduleFn);

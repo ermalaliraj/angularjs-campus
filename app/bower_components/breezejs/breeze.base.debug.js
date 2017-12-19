@@ -6289,7 +6289,7 @@ var MetadataStore = (function () {
         // assume ms is a previously created MetadataStore
         var metadataAsString = ms.exportMetadata();
         window.localStorage.setItem("metadata", metadataAsString);
-        // and later, usually in a different topic imported
+        // and later, usually in a different session imported
         var metadataFromStorage = window.localStorage.getItem("metadata");
         var newMetadataStore = new MetadataStore();
         newMetadataStore.importMetadata(metadataFromStorage);
@@ -6315,7 +6315,7 @@ var MetadataStore = (function () {
         // assume ms is a previously created MetadataStore
         var metadataAsString = ms.exportMetadata();
         window.localStorage.setItem("metadata", metadataAsString);
-        // and later, usually in a different topic
+        // and later, usually in a different session
         var metadataFromStorage = window.localStorage.getItem("metadata");
         var newMetadataStore = new MetadataStore();
         newMetadataStore.importMetadata(metadataFromStorage);
@@ -6378,7 +6378,7 @@ var MetadataStore = (function () {
         // assume ms is a previously created MetadataStore
         var metadataAsString = ms.exportMetadata();
         window.localStorage.setItem("metadata", metadataAsString);
-        // and later, usually in a different topic
+        // and later, usually in a different session
         var metadataFromStorage = window.localStorage.getItem("metadata");
         var newMetadataStore = MetadataStore.importMetadata(metadataFromStorage);
     @method importMetadata
@@ -12468,7 +12468,7 @@ var EntityManager = (function () {
         var bundle = em1.exportEntities();
         // can be stored via the web storage api
         window.localStorage.setItem("myEntityManager", bundle);
-        // assume the code below occurs in a different topic.
+        // assume the code below occurs in a different session.
         var bundleFromStorage = window.localStorage.getItem("myEntityManager");
         // and imported
         var em2 = EntityManager.importEntities(bundleFromStorage);
@@ -12511,7 +12511,7 @@ var EntityManager = (function () {
         var bundle = em1.exportEntities();
         // can be stored via the web storage api
         window.localStorage.setItem("myEntityManager", bundle);
-        // assume the code below occurs in a different topic.
+        // assume the code below occurs in a different session.
         var bundleFromStorage = window.localStorage.getItem("myEntityManager");
         var em2 = new EntityManager({ 
             serviceName: em1.serviceName, 
@@ -12554,7 +12554,7 @@ var EntityManager = (function () {
     Imports a previously exported result into this EntityManager.
     @example
     This method can be used to make a complete copy of any previously created entityManager, even if created
-    in a previous topic and stored in localStorage. The static version of this method performs a
+    in a previous session and stored in localStorage. The static version of this method performs a
     very similar process. 
     @example
         // assume em1 is an EntityManager containing a number of existing entities.
