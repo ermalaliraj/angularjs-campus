@@ -1,4 +1,4 @@
-# Campus AngulajJS Demo
+# Campus AngularJS
 
 
 ![FE](./doc/fe-angularjs.jpg)
