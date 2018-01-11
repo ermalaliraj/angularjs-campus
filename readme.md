@@ -1,8 +1,8 @@
 # Campus AngularJS
 
 Web application built with AngularJS.<br/>
-The application aim to handle professional Courses handled by the campus.<br/>
-A course can have a set of topics and a person can be subscribed in differnet courses. <br/>
+The application aim to handle professional Courses handled by the campus.
+A course can have a set of topics and a person can be subscribed in differnet courses.
 Courses have to be paid so, _not good payers_ has to be detected by the system.
 
 ![FE](./doc/fe-angularjs.jpg)
